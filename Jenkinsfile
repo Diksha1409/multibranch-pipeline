@@ -15,8 +15,9 @@ pipeline {
                      }
               stage("deploy-httpd"){
                  steps {
-                         sh "chmod -R 777 /var/www/html/index.html"
                          sh "cp -r index.html /var/www/html/index.html"
+                         sh "chmod -R 777 /var/www/html/index.html"
+                       
                         }
                       }
                   }
